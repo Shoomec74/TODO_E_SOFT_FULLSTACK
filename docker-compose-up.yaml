@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: 'todo-backend'
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACK_PORT_CONTAINER:-3000}:${BACK_APP_PORT:-3000}"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - back
+      - default
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: frontend
+    depends_on:
+      - backend
+    container_name: todo-frontend
+    ports:
+      - "${FRONT_PORT_CONTAINER:-3000}:${FRONT_APP_PORT:-80}"
+    restart: on-failure
+
+  db:
+    container_name: 'todo-postgres'
+    image: postgres:latest
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${DB_PORT:-5433}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-e_soft_task}
+    networks:
+      - back
+
+networks:
+  back:
+    driver: bridge
+    internal: true
+
+volumes:
+  db_data:
