@@ -1,0 +1,6 @@
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:Shoomec74/e_soft_front.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:Shoomec74/e_soft_task.git
