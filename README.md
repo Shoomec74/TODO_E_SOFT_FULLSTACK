@@ -5,7 +5,7 @@
 ***
 # Веб-приложение списка задач (TODO list).
 
-Ссылка на Бэкенд часть приожение на __[GitHub](https://github.com/Shoomec74/e_soft_task)__
+Ссылка на репозиторий фронтенд части проекта **[GitHub](https://github.com/Shoomec74/e_soft_front)**
 
 ## Обзор
 
@@ -29,7 +29,7 @@
 ***
 # Бэкенд чать проекта для Веб-приложения списка задач (TODO list).
 
-Ссылка на репозиторий фронтенд части проекта **[GitHub](https://github.com/Shoomec74/e_soft_front)**
+Ссылка на Бэкенд часть приожение на __[GitHub](https://github.com/Shoomec74/e_soft_task)__
 
 ## Обзор
 
