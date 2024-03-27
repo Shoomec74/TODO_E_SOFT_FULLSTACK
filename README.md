@@ -2,6 +2,7 @@
 
 ## [Frontend code](https://github.com/Shoomec74/e_soft_front)
 ## [Backend code](https://github.com/Shoomec74/e_soft_task)
+## [Скринкаст проекта](https://youtu.be/Akc-zKVavVc)
 
 ***
 
